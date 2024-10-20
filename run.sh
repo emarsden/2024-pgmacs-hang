@@ -28,7 +28,7 @@
 # At an Emacs Lisp level, the hang is related to reading from a network socket. 
 #
 #
-# To reproduce: in Emacs, type RET with point on the "data_src" table name, which will show the
+# To reproduce: in Emacs, type RET with point on the "data" table name, which will show the
 # content of that table. Then type "W foobles RET" (the "foobles" is typed into the minibuffer). This
 # applies an invalid "where filter" on the current SQL table, which generates an error from
 # PostgreSQL, and Emacs hangs reading the content of this error from the network.
