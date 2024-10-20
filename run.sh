@@ -53,15 +53,3 @@ emacs -Q -l peg.el -l pg.el -l pgmacstbl.el -l pgmacs.el -l setup.el --eval '(pg
 
 # cleanup
 podman stop pgsql
-
-
-
-# podman run --rm --name pgsql \
-# 	  --publish 5778:5778 \
-# 	   -e POSTGRES_USER=pgeltestuser \
-# 	   -e POSTGRES_PASSWORD=pgeltest \
-# 	   -e PGPORT=5778 \
-# 	   -d docker.io/aa8y/postgres-dataset:latest
-# # This docker image imports a lot of data on startup 
-# sleep 120
-# emacs -Q -l peg.el -l pg.el -l pgmacstbl.el -l pgmacs.el --eval '(pgmacs-open-string "dbname=usda hostname=localhost port=5778 user=pgeltestuser password=pgeltest")'
